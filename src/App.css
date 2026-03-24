@@ -1,69 +1,133 @@
-/* Fondo general */
-body {
+/* RESET */
+* {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Centrar contenido */
+/* FONDO MODERNO */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+/* CONTENEDOR */
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  padding: 40px 20px;
 }
 
-/* Tarjeta principal */
+/* CARD PRINCIPAL (glass effect) */
 .card {
-  background: white;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.05);
   padding: 40px;
-  border-radius: 15px;
-  max-width: 700px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Nombre */
-.card h1 {
+/* FOTO */
+.foto {
+  width: 130px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+/* TITULOS */
+h1 {
+  font-size: 32px;
   margin-bottom: 5px;
-  color: #1e3c72;
 }
 
-/* Subtítulo */
-.card h3 {
-  margin-top: 30;
-  color: #555;
-  
+h3 {
+  color: #00c6ff;
+  margin-bottom: 20px;
 }
 
-/* Texto */
-.card p {
-  color: #444;
+h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #00c6ff;
+}
+
+/* TEXTO */
+p {
+  color: #ddd;
   line-height: 1.6;
 }
 
-/* Skills */
+/* SKILLS */
 .skills {
   list-style: none;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 10px;
 }
 
-/* Cada skill */
 .skills li {
-  background: #1e3c72;
-  color: white;
-  padding: 8px 15px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  padding: 8px 14px;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 13px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.skills li:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 198, 255, 0.5);
+}
+
+/* PROYECTOS */
+.project {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 12px;
+  transition: 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project h4 {
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+/* LINKS */
+.links {
+  margin-top: 15px;
+}
+
+.links a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #00c6ff;
+  font-weight: bold;
   transition: 0.3s;
 }
 
-/* Hover bonito */
-.skills li:hover {
-  background: #2a5298;
-  transform: scale(1.05);
+.links a:hover {
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
 }
